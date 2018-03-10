@@ -5,6 +5,11 @@ using System.IO;
 
 namespace Pentti
 {
+    public static class POs
+    {
+        public static string GetCwd() => Directory.GetCurrentDirectory();
+        public static void Chdir(string pth) => Directory.SetCurrentDirectory(pth);
+    }
     public static class PSubprocess
     {
         public static bool Verbose = false;
@@ -64,5 +69,7 @@ namespace Pentti
             }
             return @out;
         }
+
+
     }
 }
