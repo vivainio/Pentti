@@ -1,4 +1,5 @@
 ﻿using System;
+using Pentti;
 
 namespace Pentti.Test
 {
@@ -6,7 +7,10 @@ namespace Pentti.Test
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
+            var parts = PSubprocess.Exec("ls", "");
+            var o = PSubprocess.CheckOutput("ls", "");
+
         }
     }
 }
